@@ -1,0 +1,34 @@
+{
+  "name": "kwe-cli",
+  "version": "1.0.0",
+  "description": "cli",
+  "main": "./bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "kwe-cli": "./bin/app.js",
+    "kwe-cli-init": "./bin/app-init.js",
+    "kwe-cli-node": "./bin/app-node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KWEY/kwe-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KWEY/kwe-cli/issues"
+  },
+  "homepage": "https://github.com/KWEY/kwe-cli#readme",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "chalk": "^2.2.0",
+    "commander": "^2.11.0",
+    "download-git-repo": "^1.0.1",
+    "inquirer": "^3.3.0"
+  }
+}
