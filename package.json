@@ -9,7 +9,7 @@
   "bin": {
     "kwe-cli": "./bin/app.js",
     "kwe-cli-init": "./bin/app-init.js",
-    "kwe-cli-node": "./bin/app-node.js"
+    "kwe-cli-update": "./bin/app-update.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,12 @@
   },
   "homepage": "https://github.com/KWEY/kwe-cli#readme",
   "dependencies": {
-    "shelljs": "^0.7.8",
+    "colors": "^1.1.2",
     "commander": "^2.11.0",
     "download-git-repo": "^1.0.1",
     "inquirer": "^3.3.0",
-    "jsonfile": "^4.0.0"
+    "jsonfile": "^4.0.0",
+    "shelljs": "^0.7.8",
+    "yargs": "^10.0.3"
   }
 }
