@@ -3,6 +3,9 @@
 **A simple CLI for template
 
 > Be sure to use bilibili private npm registry.
+**template
+
+> https://github.com/KWEY/kwe-template
 ## Installation
 ``` js
 $ npm install -g kwe-cli
