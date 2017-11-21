@@ -24,6 +24,7 @@ module.exports = function (type, options, list) {
                 console.log('no file')
             }
             shell.cp('-rf', options.name + '/*', './')
+            shell.cp('-rf', options.name + '/\.*', './')
             remove(options.name)
             replacePackage(options)
             break;

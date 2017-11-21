@@ -2,7 +2,8 @@
 
 **A simple CLI for template
 
-> Be sure to use bilibili private npm registry.
+> To use kwe-template.
+
 **template
 
 > https://github.com/KWEY/kwe-template
