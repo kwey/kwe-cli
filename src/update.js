@@ -5,7 +5,7 @@ const path = require('path');
 const jsonfile = require('jsonfile')
 const colors = require('colors')
 
-function replacePackage(options) {
+const replacePackage = (options) => {
     const file = './package.json'
     let pkg = JSON.parse(fs.readFileSync('./package.json'), 'utf8');
     for (const key in options) {
@@ -13,11 +13,14 @@ function replacePackage(options) {
             pkg[key] = options[key];
         }
     }
-    jsonfile.writeFile(file, pkg, {spaces: 2, EOL: '\r\n'}, function (err) {
+    jsonfile.writeFile(file, pkg, {spaces: 2, EOL: '\r\n'}, (err) => {
         console.error(err)
     })
 }
-module.exports = function (type, options, list) {
+const remove = (name) => {
+    shell.rm('-rf', name)
+}
+module.exports = (type, options, list) => {
     switch (type) {
         case 'c':
             if (!options.name) {
@@ -49,9 +52,5 @@ module.exports = function (type, options, list) {
     
         default:
             break;
-    }
-    
-    function remove(name) {
-        shell.rm('-rf', name)
     }
 }

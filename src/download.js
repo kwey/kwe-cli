@@ -3,15 +3,14 @@ const update = require('./update');
 const exists = require('fs').existsSync;
 const shell = require('shelljs')
 
-module.exports = function(options, cb) {
-    const branch = options.branch || 'master';
-    const name = options.name || 'kwe_template';
+module.exports = (options, cb) =>{
+    const name = options.name || 'kwe_zero';
     if (exists(name)) {
         shell.rm('-rf', name)
     }
-    download('KWEY/kwe_template#' + branch, name, {
+    download(options.url, name, {
         clone: true
-    }, function(err) {
+    }, (err) => {
         console.log(err ? 'Error' : 'Success')
         if (!err) {
             cb(name);

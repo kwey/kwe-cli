@@ -1,12 +1,12 @@
 # kwe-cli
 
-**A simple CLI for template
+**A simple CLI for zero
 
-> To use kwe-template.
+> To use zero.
 
 **template
 
-> https://github.com/KWEY/kwe-template
+> https://github.com/KWEY/zero
 ## Installation
 ``` js
 $ npm install -g kwe-cli
@@ -14,20 +14,12 @@ $ npm install -g kwe-cli
 
 ## Get Started
 ``` js
-// git clone
-$ git clone xxx
-$ cd xxx
-
 // init project
 $ kwe-cli init
+ or kwe-cli
 
 // npm install dependencies
 $ npm install
-```
-
-## init
-``` js
-$ kwe-cli init
 ```
 
 ## Update From Template
