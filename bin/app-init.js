@@ -1,32 +1,42 @@
 #!/usr/bin/env node
 
 'use strict';
-const fs = require('fs');
 const inquirer = require('inquirer');
 const download = require('../src/download');
 const update = require('../src/update');
 const questions = require('../src/questions');
+const branchs = {
+    s: 'simple',
+    r: 'rollup',
+    m: 'master',
+    simple: 'simple',
+    rollup: 'rollup',
+    master: 'master',
+}
 
-inquirer.prompt(questions).then((answers) => {
-    console.log(answers);
-    inquirer.prompt([{
-        type: 'confirm',
-        name: 'isYes',
-        message: 'Is this ok ?',
-        default: true
-    }]).then((answer) => {
-        if (answer.isYes) {
-            const branch = answers.branch;
-            console.log(answers)
-            download({
-                url: 'KWEY/zero#' + branch,
-                name: answers.name,
-              }, (params) => {
-                console.log(params);
-                update('c', answers)
-            });
-
-        }
+const init = () => {
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        inquirer.prompt([{
+            type: 'confirm',
+            name: 'isYes',
+            message: 'Is this ok ?',
+            default: true
+        }]).then((answer) => {
+            if (answer.isYes) {
+                const branch = branchs[answers.branch] || 'masters';
+                console.log('loading...')
+                download({
+                    url: 'kwey/zero#' + branch,
+                    name: answers.name,
+                  }, () => {
+                    update('c', answers)
+                });
+    
+            }
+        });
     });
-});
+}
+
+module.exports = init;
 
