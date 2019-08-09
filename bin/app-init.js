@@ -6,10 +6,8 @@ const download = require('../src/download');
 const update = require('../src/update');
 const questions = require('../src/questions');
 const branchs = {
-    s: 'simple',
     r: 'rollup',
     m: 'master',
-    simple: 'simple',
     rollup: 'rollup',
     master: 'master',
 }
@@ -23,7 +21,7 @@ const init = () => {
             default: true
         }]).then((answer) => {
             if (answer.isYes) {
-                const branch = branchs[answers.branch] || 'masters';
+                const branch = branchs[answers.branch] || 'master';
                 console.log('Downloading...')
                 download({
                     url: 'kwey/zero#' + branch,

@@ -53,7 +53,7 @@ $ kwe-cli-update -f demo src [-b master]
 ```
 项目下载分支
 ```
--branch: (default: 'master', s:simpl、r:rollup) 
+-branch: (default: 'master', r:rollup) 
 ```
 项目是否采用单元测试
 ```

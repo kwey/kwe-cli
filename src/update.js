@@ -12,9 +12,17 @@ const toUpperCase = (str) => {
 
 const replacePackage = (options, url) => {
     let pkg = JSON.parse(fs.readFileSync(url + 'package.json'), 'utf8')
+
     for (const key in options) {
-        if (options.hasOwnProperty(key) && key !== 'branch') {
-            pkg[key] = options[key];
+        if (options.hasOwnProperty(key) && key !== 'unit' && key !== 'e2e') {
+            switch (key) {
+                case 'name':
+                    pkg[key] = options[key].toLowerCase();
+                    break;
+                default:
+                    pkg[key] = options[key];
+                    break;
+            }
         }
     }
     if (options.unit === 'n') {
