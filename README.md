@@ -15,7 +15,7 @@ $ npm install -g kwe-cli
 ## Get Started
 ``` js
 // init project
-$ kwe-cli init
+$ kwe-cli-init
  or kwe-cli
 
 // npm install dependencies
@@ -23,20 +23,49 @@ $ npm install
 ```
 
 ## Update From Template
+``` js
+// update  document
+$ kwe-cli-update -d package.json [-b master]
+$ kwe-cli-update -d base.config.js  readme.md [-b master]
 ```
-// update  file
-$ kwe-cli update -f package.json [-b master]
-$ kwe-cli update -f base.config.js  readme.md [-b master]
+``` js
+// update file
+$ kwe-cli-update -f src [-b master]
+$ kwe-cli-update -f demo src [-b master]
+```
 
-// update document
-$ kwe-cli update -d build [-b master]
-$ kwe-cli update -d demo build [-b master]
+## Parameters
+项目名称，对外暴露的类名（建议采用首字母大写的驼峰命名）
+```
+-name: (default: 'KweZero') 
+```
+项目版本号
+```
+-version: (default: '0.0.0') 
+```
+项目描述
+```
+-description: (default: '') 
+```
+项目作者
+```
+-author: (default: 'kwe') 
+```
+项目下载分支
+```
+-branch: (default: 'master', s:simpl、r:rollup) 
+```
+项目是否采用单元测试
+```
+-unit: (default: 'y') 
+```
+项目是否采用e2e测试
+```
+-e2e: (default: 'y') 
 ```
 
 ## Note
 ```
-默认下载master分支代码，branch: s（下载simpl分支代码）、r(下载rollup分支代码)
-
 （当前文件夹如果为空则不创建文件夹）
 const dir = fs.readdirSync('./')
 if (dir.length > 1) {

@@ -7,13 +7,14 @@ module.exports = (options, cb) =>{
     if (exists(name)) {
         shell.rm('-rf', name)
     }
-    console.log(options);
-    download(options.url, name, {
+    const asd = download(options.url, name, {
         clone: true
     }, (err) => {
-        console.log(err ? err : 'Success')
-        if (!err) {
-            cb();
+        if (err) {
+            console.log(err)
+        } else {
+            cb()
         }
     })
+    console.log(asd);
 }

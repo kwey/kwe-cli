@@ -4,7 +4,7 @@ module.exports = [
         type: 'input',
         name: 'name',
         message: 'Enter the project name :',
-        default: 'kwe_cli'
+        default: 'KweZero'
     },
     {
         type: 'input',
@@ -28,6 +28,18 @@ module.exports = [
         name: 'branch',
         message: 'Enter the branch （s: simple, r: rollup）:',
         default: 'master'
+    },
+    {
+        type: 'input',
+        name: 'unit',
+        message: 'require unit testing（y/n）:',
+        default: 'y'
+    },
+    {
+        type: 'input',
+        name: 'e2e',
+        message: 'require e2e testing（y/n）:',
+        default: 'y'
     }
 
 ]

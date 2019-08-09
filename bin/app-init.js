@@ -13,7 +13,6 @@ const branchs = {
     rollup: 'rollup',
     master: 'master',
 }
-
 const init = () => {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers);
@@ -25,7 +24,7 @@ const init = () => {
         }]).then((answer) => {
             if (answer.isYes) {
                 const branch = branchs[answers.branch] || 'masters';
-                console.log('loading...')
+                console.log('Downloading...')
                 download({
                     url: 'kwey/zero#' + branch,
                     name: answers.name,

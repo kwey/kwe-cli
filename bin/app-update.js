@@ -1,28 +1,37 @@
-#!/usr/bin/env node  
+#!/usr/bin/env node
 
-const update = require('../src/update');
-const downloadTem = require('../src/download');
-const argv = require('yargs')
-          .usage('Usage: $0 <command> [options]');
-const files = argv
-          .alias('b', 'branch')
-          .alias('f', 'file')
-          .argv;
-const document = argv
-          .alias('b', 'branch')
-          .alias('d', 'document')
-          .argv;
+const update = require("../src/update");
+const download = require("../src/download");
+const argv = require("yargs").usage("Usage: $0 <command> [options]");
 
-const branch = files.b || 'master'
+const files = argv.alias("b", "branch").alias("f", "file").argv;
+const document = argv.alias("b", "branch").alias("d", "document").argv;
 
-if(files.file) {
-  files._[files._.length - 1] = files.f
-  downloadTem({branch: branch}, function(name) {
-    update('f', {name: name}, files._)
-  })
-} else if(document.document) {
-  document._[files._.length - 1] = document.d
-  downloadTem({branch: branch}, function(name) {
-    update('d', {name: name}, document._)
-  })
+const branch = files.b || "master";
+const name = "Update";
+
+if (files.file) {
+  console.log('Downloading...')
+  files._.push(files.f)
+  download(
+    {
+      name,
+      url: "kwey/zero#" + branch
+    },
+    () => {
+      update("f", { name }, files._);
+    }
+  );
+} else if (document.document) {
+  console.log('Downloading...')
+  document._.push(document.d)
+  download(
+    {
+      name,
+      url: "kwey/zero#" + branch
+    },
+    () => {
+      update("d", { name }, document._);
+    }
+  );
 }

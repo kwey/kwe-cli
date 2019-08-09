@@ -1,6 +1,6 @@
 {
   "name": "kwe-cli",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "cli",
   "main": "./bin/app.js",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KWEY/kwe-cli.git"
+    "url": "git+https://github.com/kwey/kwe-cli.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KWEY/kwe-cli/issues"
+    "url": "https://github.com/kwey/kwe-cli/issues"
   },
-  "homepage": "https://github.com/KWEY/kwe-cli#readme",
+  "homepage": "https://github.com/kwey/kwe-cli#readme",
   "dependencies": {
     "commander": "^2.11.0",
     "download-git-repo": "^1.0.1",
