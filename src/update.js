@@ -14,8 +14,12 @@ const replacePackage = (options, url) => {
     let pkg = JSON.parse(fs.readFileSync(url + 'package.json'), 'utf8')
 
     for (const key in options) {
-        if (options.hasOwnProperty(key) && key !== 'unit' && key !== 'e2e') {
+        if (options.hasOwnProperty(key)) {
             switch (key) {
+                case 'branch':
+                case 'unit':
+                case 'e2e':
+                    break;
                 case 'name':
                     pkg[key] = options[key].toLowerCase();
                     break;

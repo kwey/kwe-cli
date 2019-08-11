@@ -1,6 +1,6 @@
 {
   "name": "kwe-cli",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "cli",
   "main": "./bin/app.js",
   "scripts": {
