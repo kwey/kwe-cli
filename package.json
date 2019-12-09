@@ -1,6 +1,6 @@
 {
   "name": "kwe-cli",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "cli",
   "main": "./bin/app.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "bin": {
     "kwe-cli": "./bin/app.js",
-    "kwe-cli-init": "./bin/app-init.js",
+    "kwe-cli-init": "./bin/app.js",
     "kwe-cli-update": "./bin/app-update.js"
   },
   "repository": {
