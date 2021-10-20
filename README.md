@@ -22,7 +22,7 @@ $ kwe-cli-init
 $ npm install
 ```
 
-## Update From Template
+<!-- ## Update From Template
 ``` js
 // update  document
 $ kwe-cli-update -d package.json [-b master]
@@ -32,7 +32,7 @@ $ kwe-cli-update -d base.config.js  readme.md [-b master]
 // update file
 $ kwe-cli-update -f src [-b master]
 $ kwe-cli-update -f demo src [-b master]
-```
+``` -->
 
 ## Parameters
 项目名称，对外暴露的类名（建议采用首字母大写的驼峰命名）

@@ -4,6 +4,7 @@
 const inquirer = require('inquirer');
 const download = require('../src/download');
 const update = require('../src/update');
+const rollup = require('../src/rollup');
 const questions = require('../src/questions');
 const branchs = {
     r: 'rollup',
@@ -21,13 +22,21 @@ const init = () => {
             default: true
         }]).then((answer) => {
             if (answer.isYes) {
-                const branch = branchs[answers.branch] || 'master';
+                let url = 'kwey/zero'
+                const isRollup = branchs[answers.branch] === 'rollup'
+                if (isRollup) {
+                    url='kwey/rollup'
+                }
                 console.log('Downloading...')
                 download({
-                    url: 'kwey/zero#' + branch,
+                    url,
                     name: answers.name,
                   }, () => {
-                    update('c', answers)
+                      if (isRollup) {
+                        rollup(answers)
+                      } else {
+                          update('c', answers)
+                      }
                 });
     
             }
