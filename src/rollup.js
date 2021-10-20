@@ -21,6 +21,7 @@ const replacePackage = (options, url) => {
 					break;
 				case "name":
 					pkg[key] = options[key].toLowerCase();
+                    pkg.main = "dist/" + pkg[key] + ".js";
 					break;
 				default:
 					pkg[key] = options[key];

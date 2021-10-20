@@ -27,7 +27,7 @@ module.exports = [
         type: 'input',
         name: 'branch',
         message: 'Enter the branch （r: rollup）:',
-        default: 'master'
+        default: 'r'
     },
     {
         type: 'input',

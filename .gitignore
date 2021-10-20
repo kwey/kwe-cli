@@ -3,6 +3,10 @@ bin-debug/
 bin-release/
 [Oo]bj/ # FlashDevelop obj
 [Bb]in/ # FlashDevelop bin
+package-lock.json
+yarn.lock
+
+.npmrc
 
 # Other files and folders
 .settings/

@@ -22,10 +22,10 @@ const init = () => {
             default: true
         }]).then((answer) => {
             if (answer.isYes) {
-                let url = 'kwey/zero'
+                let url = 'kwey/zero#master'
                 const isRollup = branchs[answers.branch] === 'rollup'
                 if (isRollup) {
-                    url='kwey/rollup'
+                    url='kwey/rollup#main'
                 }
                 console.log('Downloading...')
                 download({
