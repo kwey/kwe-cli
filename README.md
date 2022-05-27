@@ -7,6 +7,7 @@
 **template
 
 > https://github.com/KWEY/zero
+
 > https://github.com/KWEY/rollup
 ## Installation
 ``` js
@@ -16,8 +17,7 @@ $ npm install -g kwe-cli
 ## Get Started
 ``` js
 // init project
-$ kwe-cli-init
- or kwe-cli
+$ kwe-cli
 
 // npm install dependencies
 $ npm install

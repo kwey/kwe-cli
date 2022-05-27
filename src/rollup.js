@@ -54,6 +54,7 @@ const formatFile = (options, url) => {
 	replacePackage(options, url);
 	replacebag(options.name, url + "src/index.ts");
 	replacebag(options.name, url + "rollup.utils.js");
+	replacebag(options.name, url + "rollup.config.js");
 	replacebag(options.name, url + "demo/index.html");
 	if (options.e2e !== "n") {
 		replacebag(options.name, url + "cypress/integration/sample_spec.js");
