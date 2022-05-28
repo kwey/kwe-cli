@@ -5,7 +5,7 @@ bin-release/
 [Bb]in/ # FlashDevelop bin
 package-lock.json
 yarn.lock
-
+package-lock.json
 .npmrc
 
 # Other files and folders

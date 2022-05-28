@@ -2,13 +2,14 @@
 
 **A simple CLI for zero
 
-> To use zero.
+生成TypeScript模板，包含是否使用单元测试、e2e测试
 
-**template
+branch默认为使用rollup进行构建，其他使用webpack构建
 
-> https://github.com/KWEY/zero
+> 主要使用场景
 
-> https://github.com/KWEY/rollup
+使用TypeScript进行js插件开发
+
 ## Installation
 ``` js
 $ npm install -g kwe-cli
@@ -54,7 +55,7 @@ $ kwe-cli-update -f demo src [-b master]
 ```
 项目下载分支
 ```
--branch: (default: 'master', r:rollup) 
+-branch: (default: 'r') 
 ```
 项目是否采用单元测试
 ```
@@ -65,7 +66,7 @@ $ kwe-cli-update -f demo src [-b master]
 -e2e: (default: 'y') 
 ```
 
-## Note
+<!-- ## Note
 ```
 （当前文件夹如果为空则不创建文件夹）
 const dir = fs.readdirSync('./')
@@ -76,4 +77,4 @@ if (dir.length > 1) {
     shell.cp('-rf', options.name + '/\.*', './')
     remove(options.name)
 }
-```
+``` -->
